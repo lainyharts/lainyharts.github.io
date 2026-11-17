@@ -300,7 +300,12 @@ section > * { max-width: var(--max); margin-left: auto; margin-right: auto; }
 .hello-form input:focus, .hello-form select:focus, .hello-form textarea:focus {
   outline: none; border-color: var(--mustard); box-shadow: 0 0 0 4px rgba(210, 154, 56, .3);
 }
-.hello-form.tried :invalid { border-color: #e39a7c; }
+.hello-form.tried input:invalid,
+.hello-form.tried select:invalid,
+.hello-form.tried textarea:invalid {
+  border-color: #e8805c;
+  box-shadow: 0 0 0 3px rgba(232, 128, 92, .35);
+}
 .hello-form ::placeholder { color: #a08e78; }
 .trap { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; opacity: 0; }
 .counter { margin: 0; text-align: right; font-size: .85rem; color: var(--sage-soft); }
