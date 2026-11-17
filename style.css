@@ -269,9 +269,10 @@ section > * { max-width: var(--max); margin-left: auto; margin-right: auto; }
   background: var(--cream); color: var(--moss);
   font-family: var(--display); font-weight: 700;
 }
-.contact-soon {
-  font-family: var(--hand); font-size: 1.7rem; color: var(--sage-soft); margin: 0;
+.contact-email {
+  font-family: var(--hand); font-size: 1.6rem; color: var(--sage-soft); margin: 1.1rem 0 0;
 }
+.contact-email a { color: var(--paper); text-decoration-color: var(--mustard); text-underline-offset: 4px; }
 .adopt-card .btn-primary { background: var(--mustard); color: var(--walnut); }
 .adopt-card .btn-primary:hover { background: #e2ad4c; }
 
