@@ -177,8 +177,67 @@
           <li><span class="num">2</span><span><strong>Dream one up.</strong> Got a creature in mind that doesn't exist yet? Ask about it.</span></li>
           <li><span class="num">3</span><span><strong>It's made by hand</strong> and sent home to you.</span></li>
         </ol>
-        <a class="btn btn-primary" href="mailto:LainyHarts@gmail.com?subject=Puffling%20hello">Say hello</a>
-        <p class="contact-email">or write to <a href="mailto:LainyHarts@gmail.com">LainyHarts@gmail.com</a></p>
+        <form id="hello-form" class="hello-form" action="https://formsubmit.co/LainyHarts@gmail.com" method="POST" novalidate>
+          <!-- FormSubmit settings -->
+          <input type="hidden" name="_subject" value="New puffling note from the website">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://lainyharts.github.io/#thanks">
+          <!-- spam trap: real people never see or fill this -->
+          <input type="text" name="_honey" class="trap" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <div class="field-row">
+            <div class="field">
+              <label for="f-first">First name</label>
+              <input id="f-first" name="first_name" type="text" autocomplete="given-name" required maxlength="60">
+            </div>
+            <div class="field">
+              <label for="f-last">Last name</label>
+              <input id="f-last" name="last_name" type="text" autocomplete="family-name" required maxlength="60">
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="f-email">Email</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required maxlength="120">
+            </div>
+            <div class="field">
+              <label for="f-phone">Phone <span class="opt">(optional)</span></label>
+              <input id="f-phone" name="phone" type="tel" autocomplete="tel" maxlength="30">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="f-about">What's this about?</label>
+            <select id="f-about" name="about" required>
+              <option value="" selected disabled>Pick one…</option>
+              <option>The Fuzzy Octopus</option>
+              <option>Eeyore</option>
+              <option>The Golden-Tufted Mouse</option>
+              <option>A custom creature</option>
+              <option>Just saying hello</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="f-msg">Tell me about it</label>
+            <textarea id="f-msg" name="message" rows="6" required maxlength="1000"
+              placeholder="Which creature, colors you love, who it's for, any dates to know about…"></textarea>
+            <p class="counter" aria-live="polite"><span id="f-count">0</span> / 1000</p>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send to Lainy</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="form-thanks" id="thanks" hidden>
+          <svg aria-hidden="true"><use href="#heart"/></svg>
+          <h3>Thank you!</h3>
+          <p>Your note is on its way to Lainy. She'll write back soon.</p>
+        </div>
+
+        <p class="contact-email">or write directly to <a href="mailto:LainyHarts@gmail.com">LainyHarts@gmail.com</a></p>
       </div>
     </section>
 
@@ -211,5 +270,6 @@
       document.getElementById('year').textContent = new Date().getFullYear();
     })();
   </script>
+  <script src="form.js"></script>
 </body>
 </html>
