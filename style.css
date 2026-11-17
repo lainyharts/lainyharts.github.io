@@ -187,7 +187,7 @@ section > * { max-width: var(--max); margin-left: auto; margin-right: auto; }
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: clamp(1.2rem, 3vw, 2rem);
-  max-width: 640px;
+  max-width: 920px;
 }
 .card {
   background: var(--paper);
