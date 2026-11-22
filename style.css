@@ -415,3 +415,19 @@ dialog#lightbox .close {
   .feature-actions { justify-content: center; }
   .sprig-d { display: none; }
 }
+
+/* ---------- one-of-a-kind, text only (couch photo removed) ---------- */
+.crew-solo { display: block; text-align: center; }
+.crew-solo .crew-text { max-width: 900px; margin: 0 auto; }
+.crew-solo .crew-text > p { max-width: 38rem; margin-left: auto; margin-right: auto; }
+.crew-solo .promises { grid-template-columns: repeat(3, 1fr); gap: clamp(1rem, 3vw, 2rem); margin-top: 2.2rem; }
+.crew-solo .promises li {
+  flex-direction: column; align-items: center; text-align: center; gap: .6rem;
+  background: var(--paper); border-radius: var(--radius); padding: 1.4rem 1.2rem;
+  box-shadow: 0 1px 0 var(--sand), var(--shadow);
+}
+.crew-solo .promises strong { display: block; font-family: var(--display); font-size: 1.15rem; color: var(--walnut); }
+.crew-solo .promises svg { margin-top: 0; width: 26px; height: 24px; flex-basis: auto; }
+@media (max-width: 720px) { .crew-solo .promises { grid-template-columns: 1fr; max-width: 420px; margin-left: auto; margin-right: auto; } }
+.pufflings .feature h3 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); margin-bottom: .5em; }
+.pufflings .feature { padding: 0; }

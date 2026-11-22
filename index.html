@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=10">
+  <link rel="stylesheet" href="style.css?v=11">
 </head>
 <body>
 
@@ -85,37 +85,8 @@
       </svg>
     </div>
 
-    <!-- FEATURED: EEYORE -->
-    <section class="feature" aria-labelledby="feature-title">
-      <div class="feature-photo">
-        <button class="zoom arch arch-feature" data-full="images/donkey.jpg" aria-label="View Eeyore larger">
-          <img src="images/donkey.jpg" alt="Eeyore, a gray hand-knit puffling with floppy pink-lined ears, a shaggy black mane and a satin bow on his tail, sitting on a cream couch" width="413" height="600" loading="lazy">
-        </button>
-        <svg class="sprig sprig-d" aria-hidden="true"><use href="#sprig"/></svg>
-      </div>
-      <div class="feature-text">
-        <p class="eyebrow">Featured puffling</p>
-        <h2 id="feature-title">Meet Eeyore</h2>
-        <p>
-          Floppy ears lined in pink, a shaggy black mane, and a satin bow tied on the end of his tail.
-          He's soft, gray and a little bit gloomy, and he's very, very good at being hugged.
-        </p>
-        <p class="note">the softest little donkey ♥</p>
-        <div class="feature-actions">
-          <a class="btn btn-primary" href="pufflings.html">See all the pufflings</a>
-          <a class="btn btn-ghost" href="adopted.html">See him with his person</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- THE CREW -->
-    <section class="crew">
-      <figure class="crew-photo">
-        <button class="zoom" data-full="images/family.jpg" aria-label="View the whole crew larger">
-          <img src="images/family.jpg" alt="Hand-knit pufflings sitting together on a cream couch, including Eeyore, a duck, a spotted cat, and a rosy octopus" width="600" height="459" loading="lazy">
-        </button>
-        <figcaption class="note">the couch crew, waiting for homes ♥</figcaption>
-      </figure>
+    <!-- ONE OF A KIND -->
+    <section class="crew crew-solo">
       <div class="crew-text">
         <h2>Every puffling is one of a kind</h2>
         <p>
@@ -130,40 +101,34 @@
       </div>
     </section>
 
-    <!-- PUFFLINGS -->
+    <!-- PUFFLINGS: featuring Eeyore -->
     <section id="pufflings" class="pufflings">
       <div class="section-head">
         <svg class="sprig" aria-hidden="true"><use href="#sprig"/></svg>
         <h2>Meet the pufflings</h2>
-        <p>A few of the creatures that have come to life in her hands so far.</p>
       </div>
 
-      <div class="grid">
-        <article class="card">
-          <button class="zoom arch" data-full="images/octopus.jpg" aria-label="View the fuzzy octopus larger">
-            <img src="images/octopus.jpg" alt="A fuzzy rose-and-white octopus puffling with curly arms" width="450" height="600" loading="lazy">
+      <div class="feature">
+        <div class="feature-photo">
+          <button class="zoom arch arch-feature" data-full="images/donkey.jpg" aria-label="View Eeyore larger">
+            <img src="images/donkey.jpg" alt="Eeyore, a gray hand-knit puffling with floppy pink-lined ears, a shaggy black mane and a satin bow on his tail, sitting on a cream couch" width="413" height="600" loading="lazy">
           </button>
-          <h3>The Fuzzy Octopus</h3>
-          <p>Eight curly arms of rosy, frosted fluff. Built for squeezing.</p>
-        </article>
-
-        <article class="card">
-          <button class="zoom arch" data-full="images/donkey.jpg" aria-label="View Eeyore larger">
-            <img src="images/donkey.jpg" alt="A gray Eeyore puffling with floppy pink-lined ears, a black mane and a satin bow on his tail" width="413" height="600" loading="lazy">
-          </button>
+          <svg class="sprig sprig-d" aria-hidden="true"><use href="#sprig"/></svg>
+        </div>
+        <div class="feature-text">
+          <p class="eyebrow">Featured puffling</p>
           <h3>Eeyore</h3>
-          <p>Floppy ears, a shaggy mane, and a satin bow tied on his tail.</p>
-        </article>
-
-        <article class="card">
-          <button class="zoom arch" data-full="images/duck.jpg" aria-label="View the little duck larger">
-            <img src="images/duck.jpg" alt="A snow-white duck puffling with a golden bill and big golden feet, sitting on a plaid quilt" width="600" height="800" loading="lazy">
-          </button>
-          <h3>The Little Duck</h3>
-          <p>Snow-white and squishy, with a golden bill and big floppy feet.</p>
-        </article>
+          <p>
+            Floppy ears lined in pink, a shaggy black mane, and a satin bow tied on the end of his tail.
+            He's soft, gray and a little bit gloomy, and he's very, very good at being hugged.
+          </p>
+          <p class="note">the softest little donkey ♥</p>
+          <div class="feature-actions">
+            <a class="btn btn-primary" href="pufflings.html">Meet the other pufflings</a>
+            <a class="btn btn-ghost" href="adopted.html">See him with his person</a>
+          </div>
+        </div>
       </div>
-      <p class="more-link"><a href="pufflings.html">see all the pufflings →</a></p>
     </section>
 
     <!-- knit band -->
