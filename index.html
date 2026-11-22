@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=9">
+  <link rel="stylesheet" href="style.css?v=10">
 </head>
 <body>
 
@@ -44,8 +44,8 @@
       <span>LainyHarts</span>
     </a>
     <nav aria-label="Main">
-      <a href="#pufflings">Pufflings</a>
-      <a href="gallery.html">Gallery</a>
+      <a href="pufflings.html">Pufflings</a>
+      <a href="adopted.html">Adopted</a>
       <a href="#about">About</a>
       <a href="#adopt" class="nav-cta">Adopt one</a>
     </nav>
@@ -84,6 +84,29 @@
               fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
       </svg>
     </div>
+
+    <!-- FEATURED: EEYORE -->
+    <section class="feature" aria-labelledby="feature-title">
+      <div class="feature-photo">
+        <button class="zoom arch arch-feature" data-full="images/donkey.jpg" aria-label="View Eeyore larger">
+          <img src="images/donkey.jpg" alt="Eeyore, a gray hand-knit puffling with floppy pink-lined ears, a shaggy black mane and a satin bow on his tail, sitting on a cream couch" width="413" height="600" loading="lazy">
+        </button>
+        <svg class="sprig sprig-d" aria-hidden="true"><use href="#sprig"/></svg>
+      </div>
+      <div class="feature-text">
+        <p class="eyebrow">Featured puffling</p>
+        <h2 id="feature-title">Meet Eeyore</h2>
+        <p>
+          Floppy ears lined in pink, a shaggy black mane, and a satin bow tied on the end of his tail.
+          He's soft, gray and a little bit gloomy, and he's very, very good at being hugged.
+        </p>
+        <p class="note">the softest little donkey ♥</p>
+        <div class="feature-actions">
+          <a class="btn btn-primary" href="pufflings.html">See all the pufflings</a>
+          <a class="btn btn-ghost" href="adopted.html">See him with his person</a>
+        </div>
+      </div>
+    </section>
 
     <!-- THE CREW -->
     <section class="crew">
@@ -140,7 +163,7 @@
           <p>Snow-white and squishy, with a golden bill and big floppy feet.</p>
         </article>
       </div>
-      <p class="more-link"><a href="gallery.html">see every puffling so far →</a></p>
+      <p class="more-link"><a href="pufflings.html">see all the pufflings →</a></p>
     </section>
 
     <!-- knit band -->

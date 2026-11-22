@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adopted Pufflings · LainyHarts Creature Company</title>
+  <meta name="description" content="Hand-knit pufflings from LainyHarts Creature Company that have found their people.">
+  <meta name="theme-color" content="#f3e9d4">
+  <meta property="og:title" content="Adopted Pufflings · LainyHarts">
+  <meta property="og:description" content="Hand-knit pufflings from LainyHarts Creature Company that have found their people.">
+  <meta property="og:image" content="https://lainyharts.github.io/images/logo.jpg">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/icon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=10">
+</head>
+<body>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="sprig" viewBox="0 0 120 40">
+      <path d="M4 20 C40 18 80 18 116 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <g fill="currentColor">
+        <ellipse cx="24" cy="12" rx="9" ry="4" transform="rotate(-28 24 12)"/>
+        <ellipse cx="24" cy="28" rx="9" ry="4" transform="rotate(28 24 28)"/>
+        <ellipse cx="48" cy="11" rx="10" ry="4.5" transform="rotate(-28 48 11)"/>
+        <ellipse cx="48" cy="29" rx="10" ry="4.5" transform="rotate(28 48 29)"/>
+        <ellipse cx="72" cy="12" rx="9" ry="4" transform="rotate(-28 72 12)"/>
+        <ellipse cx="72" cy="28" rx="9" ry="4" transform="rotate(28 72 28)"/>
+        <ellipse cx="102" cy="20" rx="11" ry="5"/>
+      </g>
+    </symbol>
+  </svg>
+
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <img src="images/icon-180.png" alt="" width="40" height="40">
+      <span>LainyHarts</span>
+    </a>
+    <nav aria-label="Main">
+      <a href="pufflings.html">Pufflings</a>
+      <a href="adopted.html" aria-current="page">Adopted</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#adopt" class="nav-cta">Adopt one</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="gallery">
+      <div class="section-head">
+        <svg class="sprig" aria-hidden="true"><use href="#sprig"/></svg>
+        <p class="eyebrow">Gone home</p>
+        <h1>Adopted Pufflings</h1>
+        <p>These pufflings have found their people. Every one of them went home to a hug.</p>
+      </div>
+
+      <div class="wall">
+        <figure class="polaroid">
+          <button class="zoom" data-full="images/gallery/eeyore-hug.jpg" aria-label="View Eeyore getting a hug larger">
+            <img src="images/gallery/eeyore-hug.jpg" alt="A woman hugging the gray Eeyore puffling tight, his pink satin tail bow hanging below" width="450" height="600" loading="lazy">
+          </button>
+          <figcaption><strong>Eeyore</strong><span>bow on, hug in progress</span></figcaption>
+        </figure>
+        <figure class="polaroid">
+          <button class="zoom" data-full="images/gallery/pup-hug.jpg" aria-label="View the patchwork pup larger">
+            <img src="images/gallery/pup-hug.jpg" alt="A smiling young man hugging a patchwork puppy puffling knit in tan, caramel and chocolate brown" width="450" height="600" loading="lazy">
+          </button>
+          <figcaption><strong>The Patchwork Pup</strong><span>already getting squeezed</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="gallery-cta">
+        <p class="note">want one of your own?</p>
+        <a class="btn btn-primary" href="index.html#adopt">Say hello to Lainy</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img src="images/logo.jpg" alt="" width="120" height="120" loading="lazy">
+    <p class="footer-name">LainyHarts Creature Company</p>
+    <p class="footer-tag">Hand-knit with heart · © <span id="year">2026</span></p>
+  </footer>
+
+  <dialog id="lightbox" aria-label="Photo">
+    <form method="dialog"><button class="close" aria-label="Close">×</button></form>
+    <img src="" alt="">
+  </dialog>
+
+  <script>
+    (function () {
+      var box = document.getElementById('lightbox');
+      var img = box.querySelector('img');
+      document.querySelectorAll('.zoom').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var inner = btn.querySelector('img');
+          img.src = btn.dataset.full;
+          img.alt = inner ? inner.alt : '';
+          if (typeof box.showModal === 'function') box.showModal();
+        });
+      });
+      box.addEventListener('click', function (e) { if (e.target === box) box.close(); });
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
